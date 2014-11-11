@@ -30,4 +30,4 @@ alldata <- cbind(x_data, y_data, subject_data)
 #step 5
 library(plyr)
 averages_data <- ddply(alldata, .(subject, activity), function(x) colMeans(x[, 1:66]))
-write.table(averages_data, "averages_data.txt", row.name=FALSE)
+write.table(averages_data, "averages_data.txt", row.name=FALSE,sep="\t")
